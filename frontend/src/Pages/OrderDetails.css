@@ -1,0 +1,498 @@
+/* Luxury Furniture Order Details */
+.order-details-page {
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 0 3rem;
+  font-family: 'Cormorant Garamond', serif;
+  color: #3E2723; /* Rich walnut */
+  background-color: #F8F4EF; /* Linen */
+}
+
+/* Back Button - Brass Accented */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: transparent;
+  color: #8C6B4A; /* Oak */
+  border: 1px solid #B38B59; /* Brass */
+  padding: 1rem 2rem;
+  border-radius: 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 4rem;
+  transition: all 0.4s ease;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.back-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(179, 139, 89, 0.1), transparent);
+  transition: all 0.6s ease;
+}
+
+.back-button:hover {
+  background: rgba(179, 139, 89, 0.05);
+  color: #3E2723;
+}
+
+.back-button:hover::before {
+  left: 100%;
+}
+
+/* Order Header - Premium Display */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #D7C4B5; /* Cashmere */
+}
+
+.order-header h1 {
+  color: #3E2723;
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+}
+
+.order-header h1::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: #B38B59; /* Brass */
+}
+
+.order-status p {
+  color: #6D5C54; /* Taupe */
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Status Badge - Luxury Tags */
+.status-badge {
+  padding: 0.7rem 1.8rem;
+  border-radius: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.status-badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.15);
+  mix-blend-mode: overlay;
+}
+
+.badge-processing {
+  background-color: rgba(212, 160, 23, 0.08);
+  color: #D4A017; /* Gold */
+  border-color: #D4A017;
+}
+
+.badge-shipped {
+  background-color: rgba(122, 107, 95, 0.08);
+  color: #7A6B5F; /* Slate */
+  border-color: #7A6B5F;
+}
+
+.badge-delivered {
+  background-color: rgba(90, 143, 61, 0.08);
+  color: #5A8F3D; /* Olive */
+  border-color: #5A8F3D;
+}
+
+.badge-cancelled {
+  background-color: rgba(166, 68, 68, 0.08);
+  color: #A64444; /* Terra cotta */
+  border-color: #A64444;
+}
+
+/* Order Sections - Gallery Layout */
+.details-user-order-sections {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* Order Items Section - Showroom Display */
+.details-user-order-items-section {
+  background: #FFFDFA;
+  padding: 3rem;
+  border: 1px solid #D7C4B5;
+  box-shadow: 0 10px 30px rgba(62, 39, 35, 0.05);
+  position: relative;
+}
+
+.details-user-order-items-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #B38B59;
+}
+
+.details-user-section-title {
+  color: #3E2723;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.details-user-order-items {
+  margin: 2.5rem 0;
+}
+
+.details-user-order-item {
+  display: flex;
+  gap: 2.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px dashed #D7C4B5;
+  align-items: center;
+}
+
+.details-user-order-item:last-child {
+  border-bottom: none;
+}
+
+.details-user-product-image {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  background: #FFF;
+  padding: 1.5rem;
+  border: 1px solid #D7C4B5;
+  transition: all 0.4s ease;
+}
+
+.details-user-order-item:hover .details-user-product-image {
+  transform: scale(1.03);
+  box-shadow: 0 5px 20px rgba(62, 39, 35, 0.1);
+}
+
+.details-user-item-details h4 {
+  margin: 0 0 1.5rem 0;
+  color: #3E2723;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.details-user-item-details h4::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #B38B59;
+}
+
+.details-user-item-meta {
+  display: flex;
+  gap: 2rem;
+  color: #6D5C54;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Order Summary - Elegant Totals */
+.details-user-order-summary {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #D7C4B5;
+}
+
+.details-user-summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  color: #6D5C54;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.details-user-summary-row.total {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #3E2723;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #D7C4B5;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Order Info Section - Side Panel */
+.details-user-order-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Shipping & Payment Info - Luxury Cards */
+.details-user-shipping-info, 
+.details-user-payment-info {
+  background: #FFFDFA;
+  padding: 3rem;
+  border: 1px solid #D7C4B5;
+  box-shadow: 0 10px 30px rgba(62, 39, 35, 0.05);
+  position: relative;
+}
+
+.details-user-shipping-info::before,
+.details-user-payment-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: #B38B59;
+}
+
+.details-user-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.details-user-info-row {
+  display: flex;
+  align-items: baseline;
+}
+
+.details-user-info-label {
+  min-width: 140px;
+  color: #6D5C54;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.details-user-info-value {
+  color: #3E2723;
+  flex: 1;
+  font-size: 1.1rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Action Section - Prominent CTAs */
+.details-user-action-section {
+  margin-top: 3rem;
+}
+
+.details-user-cancellation-notice, 
+.details-user-tracking-info {
+  background: #FFFDFA;
+  padding: 3rem;
+  border: 1px solid #D7C4B5;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(62, 39, 35, 0.05);
+}
+
+.details-user-cancellation-notice h3, 
+.details-user-tracking-info h3 {
+  color: #3E2723;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.8px;
+}
+
+.details-user-cancellation-notice p, 
+.details-user-tracking-info p {
+  color: #6D5C54;
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8;
+}
+
+/* Action Buttons - Furniture Hardware Inspired */
+.details-user-cancel-button, 
+.details-user-track-button {
+  padding: 1.2rem 3rem;
+  border: none;
+  border-radius: 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.details-user-cancel-button {
+  background: #A64444;
+  color: #FFF;
+}
+
+.details-user-cancel-button:hover {
+  background: #8C3838;
+}
+
+.details-user-track-button {
+  background: #B38B59;
+  color: #FFF;
+}
+
+.details-user-track-button:hover {
+  background: #9C7548;
+}
+
+.details-user-cancel-button::after,
+.details-user-track-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: all 0.6s ease;
+}
+
+.details-user-cancel-button:hover::after,
+.details-user-track-button:hover::after {
+  left: 100%;
+}
+
+/* Loading and Error States */
+.loading {
+  text-align: center;
+  padding: 5rem;
+  color: #6D5C54;
+  font-size: 1.4rem;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.5px;
+}
+
+.error {
+  text-align: center;
+  padding: 2.5rem;
+  color: #A64444;
+  background-color: #F9F1EF;
+  border-left: 4px solid #A64444;
+  margin: 3rem 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .order-details-page {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .details-user-order-sections {
+    grid-template-columns: 1fr;
+  }
+  
+  .details-user-order-info-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .details-user-shipping-info,
+  .details-user-payment-info {
+    flex: 1 1 45%;
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .order-status {
+    align-items: flex-start;
+  }
+  
+  .details-user-order-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .details-user-item-meta {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .details-user-info-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .details-user-info-label {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .order-details-page {
+    padding: 0 1.5rem;
+  }
+  
+  .details-user-shipping-info,
+  .details-user-payment-info {
+    min-width: 100%;
+  }
+  
+  .details-user-cancellation-notice,
+  .details-user-tracking-info {
+    padding: 2rem 1.5rem;
+  }
+  
+  .details-user-cancel-button,
+  .details-user-track-button {
+    width: 100%;
+  }
+}

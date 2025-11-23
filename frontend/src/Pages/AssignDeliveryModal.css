@@ -1,0 +1,241 @@
+/* Luxury Furniture Assign Delivery Modal */
+.luxury-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.luxury-modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-family: 'Playfair Display', 'Georgia', serif;
+  border: 1px solid #e0d6c2;
+}
+
+.luxury-modal-content h2 {
+  margin-top: 0;
+  color: #3a3a3a;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.luxury-modal-content h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #c8a97e, transparent);
+  margin: 15px auto 0;
+}
+
+.luxury-order-id-display {
+  background: #f9f7f3;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border: 1px solid #e0d6c2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.luxury-order-id-display p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.luxury-order-id-display strong {
+  color: #3a3a3a;
+  margin-right: 8px;
+}
+
+.luxury-order-id-display span {
+  cursor: help;
+  border-bottom: 1px dotted #777;
+}
+
+.luxury-copy-btn {
+  padding: 6px 12px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.luxury-copy-btn:hover {
+  background: #e0e0e0;
+}
+
+.luxury-copy-btn.copied {
+  background: #4caf50;
+  color: white;
+  border-color: #3e8e41;
+}
+
+.luxury-error-message {
+  background: #fde8e8;
+  color: #b71c1c;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border-left: 4px solid #b71c1c;
+  position: relative;
+}
+
+.luxury-dismiss-error {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  color: #b71c1c;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.luxury-form-group {
+  margin-bottom: 25px;
+}
+
+.luxury-form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #555;
+  font-size: 1rem;
+}
+
+.luxury-form-group select,
+.luxury-form-group input,
+.luxury-form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0d6c2;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #f9f7f3;
+  transition: all 0.3s ease;
+}
+
+.luxury-form-group select:focus,
+.luxury-form-group input:focus,
+.luxury-form-group textarea:focus {
+  outline: none;
+  border-color: #c8a97e;
+  box-shadow: 0 0 0 2px rgba(200, 169, 126, 0.2);
+}
+
+.luxury-form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.luxury-field-error {
+  color: #b71c1c;
+  font-size: 0.85rem;
+  margin-top: 8px;
+  display: block;
+}
+
+.luxury-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.luxury-modal-actions button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.luxury-submit-btn {
+  background: #c8a97e;
+  color: white;
+  box-shadow: 0 2px 5px rgba(200, 169, 126, 0.2);
+}
+
+.luxury-submit-btn:hover {
+  background: #b89a6e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(200, 169, 126, 0.3);
+}
+
+.luxury-submit-btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.luxury-cancel-btn {
+  background: #f5f5f5;
+  color: #555;
+  border: 1px solid #ddd;
+}
+
+.luxury-cancel-btn:hover {
+  background: #e0e0e0;
+}
+
+.luxury-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: luxury-spin 1s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes luxury-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .luxury-modal-content {
+    padding: 25px 20px;
+  }
+  
+  .luxury-modal-actions {
+    flex-direction: column;
+  }
+  
+  .luxury-modal-actions button {
+    width: 100%;
+  }
+}

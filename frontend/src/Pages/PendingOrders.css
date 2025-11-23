@@ -1,0 +1,264 @@
+/* Luxury Furniture Pending Orders */
+.pending-orders-container {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  font-family: 'Playfair Display', serif;
+  border: 1px solid #e0d6c2;
+}
+
+.orders-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0e6d2;
+}
+
+.orders-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #4e342e;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.orders-subtitle {
+  color: #8d6e63;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.sync-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #f9f7f3;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  color: #8d6e63;
+  font-size: 1rem;
+  border: 1px solid #e0d6c2;
+}
+
+.sync-icon {
+  font-size: 1.2rem;
+  animation: pulse 1.5s infinite;
+}
+
+.orders-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-card {
+  background: #fff;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e0d6c2;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.order-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.order-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.order-id {
+  font-family: 'Courier New', monospace;
+  color: #6d4c41;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.order-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #8d6e63;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.deadline-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d7ccc8;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.deadline-input:focus {
+  outline: none;
+  border-color: #c8a97e;
+  box-shadow: 0 0 0 3px rgba(200, 169, 126, 0.2);
+}
+
+.error-message {
+  color: #b71c1c;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.generate-btn {
+  padding: 0.75rem 1.5rem;
+  background: #c8a97e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 5px rgba(200, 169, 126, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.generate-btn:hover {
+  background: #b89a6e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(200, 169, 126, 0.3);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f9f7f3;
+  border-radius: 10px;
+  border: 1px dashed #d7ccc8;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #c8a97e;
+  opacity: 0.7;
+}
+
+.empty-title {
+  color: #4e342e;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.empty-text {
+  color: #8d6e63;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #6d4c41;
+  font-size: 1.2rem;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #c8a97e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1.5rem;
+}
+
+.error-container {
+  text-align: center;
+  padding: 2rem;
+  background: #fde8e8;
+  border-radius: 8px;
+  color: #b71c1c;
+  border-left: 4px solid #b71c1c;
+  max-width: 800px;
+  margin: 2rem auto;
+  font-size: 1.1rem;
+}
+
+.error-icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .pending-orders-container {
+    padding: 2rem;
+  }
+  
+  .orders-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pending-orders-container {
+    padding: 1.5rem;
+  }
+  
+  .order-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .deadline-input {
+    max-width: 100%;
+  }
+  
+  .generate-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .orders-title {
+    font-size: 1.8rem;
+  }
+  
+  .orders-subtitle {
+    font-size: 1rem;
+  }
+  
+  .empty-state {
+    padding: 2rem 1rem;
+  }
+}

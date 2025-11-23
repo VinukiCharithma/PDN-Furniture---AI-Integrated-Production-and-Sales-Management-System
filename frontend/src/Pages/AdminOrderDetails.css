@@ -1,0 +1,395 @@
+.admin-order-details {
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #f8f5f2;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.back-button {
+  padding: 10px 20px;
+  background-color: #8d6e63;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-button:hover {
+  background-color: #6d4c41;
+  transform: translateY(-1px);
+}
+
+.order-header {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #d7ccc8;
+  padding-bottom: 20px;
+}
+
+.order-header h1 {
+  font-family: 'Playfair Display', serif;
+  color: #4e342e;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.details-order-meta {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.order-status {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.details-order-status span {
+  color: #5d4037;
+  font-size: 0.95rem;
+}
+
+.details-order-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.details-order-items-section, 
+.details-order-info-section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(78, 52, 46, 0.05);
+}
+
+.details-order-items-section h2,
+.details-order-info-section h2 {
+  font-family: 'Playfair Display', serif;
+  color: #4e342e;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #efebe9;
+  padding-bottom: 10px;
+}
+
+.details-order-items-list {
+  margin-bottom: 30px;
+}
+
+.details-order-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #efebe9;
+}
+
+.details-order-item:last-child {
+  border-bottom: none;
+}
+
+.details-product-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #d7ccc8;
+}
+
+.details-item-details {
+  flex: 1;
+}
+
+.details-item-details h4 {
+  margin: 0 0 10px 0;
+  color: #4e342e;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.details-item-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 0.95rem;
+  color: #8d6e63;
+}
+
+.details-order-summary {
+  border: 1px solid #efebe9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.details-summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #5d4037;
+}
+
+.details-summary-row.total {
+  font-weight: bold;
+  border-top: 1px solid #efebe9;
+  padding-top: 15px;
+  margin-top: 15px;
+  color: #4e342e;
+  font-size: 1.1rem;
+}
+
+.details-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.details-info-row {
+  display: flex;
+}
+
+.details-info-label {
+  font-weight: bold;
+  min-width: 120px;
+  color: #5d4037;
+}
+
+.details-info-value {
+  flex: 1;
+  color: #8d6e63;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  margin: 25px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #d7ccc8;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -36px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #c8a97e;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #c8a97e;
+}
+
+.timeline-content {
+  padding: 15px 20px;
+  background-color: #faf9f7;
+  border-radius: 6px;
+  border-left: 3px solid #c8a97e;
+}
+
+.timeline-content h4 {
+  margin: 0 0 8px 0;
+  color: #4e342e;
+  font-weight: 500;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #8d6e63;
+}
+
+.status-update {
+  margin-top: 40px;
+  padding: 25px;
+  background-color: #faf9f7;
+  border-radius: 8px;
+  border: 1px solid #efebe9;
+}
+
+.status-controls {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.status-controls select {
+  padding: 12px 15px;
+  border-radius: 4px;
+  border: 1px solid #d7ccc8;
+  flex: 1;
+  color: #5d4037;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.status-controls select:focus {
+  outline: none;
+  border-color: #c8a97e;
+  box-shadow: 0 0 0 2px rgba(200, 169, 126, 0.2);
+}
+
+.status-controls button {
+  padding: 12px 25px;
+  background-color: #c8a97e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.status-controls button:hover:not(:disabled) {
+  background-color: #b38b5a;
+  transform: translateY(-1px);
+}
+
+.status-controls button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: inline-block;
+  min-width: 100px;
+  text-align: center;
+}
+
+.badge-processing {
+  background-color: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ffe0b2;
+}
+
+.badge-shipped {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #bbdefb;
+}
+
+.badge-delivered {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.badge-cancelled {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+
+.loading, 
+.error-container {
+  text-align: center;
+  padding: 60px;
+  color: #5d4037;
+  font-size: 1.1rem;
+}
+
+.error-container .error {
+  color: #c62828;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .order-sections {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .order-sections {
+    grid-template-columns: 1fr;
+  }
+  
+  .order-items-section,
+  .order-info-section {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-order-details {
+    padding: 20px;
+  }
+  
+  .order-header h1 {
+    font-size: 2rem;
+  }
+  
+  .order-item {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+  
+  .status-controls {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .order-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .order-items-section,
+  .order-info-section {
+    padding: 20px;
+  }
+  
+  .timeline {
+    padding-left: 20px;
+  }
+  
+  .timeline-dot {
+    left: -28px;
+    width: 14px;
+    height: 14px;
+  }
+}
