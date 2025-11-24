@@ -102,7 +102,7 @@ app.use((err, req, res, next) => {
 });
 
 // MongoDB connection
-const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://admin:LSU3X5WXNVLEimhz@cluster0.ze9pt.mongodb.net/your-database-name";
+const MONGO_URI = process.env.MONGO_URI || "<<add your db link>>";
 
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
